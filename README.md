@@ -15,10 +15,6 @@ The project follows an end-to-end machine learning workflow:
 5. **Web Application Development:** An interactive web application is built using Streamlit, allowing users to input customer data and receive churn predictions in real time.
 6. **Deployment:** The Streamlit application is deployed on Hugging Face Spaces for easy access and demonstration.
 
-## Demo
-
-Try out the live demo of the churn prediction app on Hugging Face Spaces: \[Link to your Hugging Face Spaces app] (Replace with the actual link when you deploy it)
-
 ## Dataset
 
 The project uses the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) from Kaggle. The dataset contains information about customer demographics, services used, contract details, and whether or not the customer churned.
@@ -161,7 +157,7 @@ This project is licensed under the \[Your Chosen License] - see the [LICENSE](LI
 
 ## Contact
 
-[Your Name] - [Your Email or Upwork Profile URL]
+Anton Soloviev - https://www.upwork.com/freelancers/~01b9d171164a005062
 
 ## Acknowledgements
 
