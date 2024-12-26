@@ -129,10 +129,6 @@ The model performs reasonably well in predicting customer churn, with an overall
 *   **Hyperparameter Tuning:** More extensive hyperparameter tuning, potentially using techniques like `GridSearchCV` or `RandomizedSearchCV`, could lead to better model performance.
 *   **Try Different Models:** Experimenting with other algorithms (e.g., LightGBM, CatBoost) might yield better results.
 
-**Training and Validation Curves:**
-
-(If you have the training and validation loss/accuracy curves, include the images here and add a brief interpretation. For example, you might discuss whether there are signs of overfitting or underfitting.)
-
 ## Project Structure
 
 ```
