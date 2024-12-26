@@ -36,7 +36,7 @@ This repository does not include the full dataset due to its size. To download t
 1. Clone the repository:
 
     ```bash
-    git clone [Your GitHub repository URL]
+    git clone https://github.com/antonsoo/customer-churn-prediction.git
     ```
 
 2. Navigate to the project directory:
@@ -77,19 +77,61 @@ This repository does not include the full dataset due to its size. To download t
 
 The best-performing model (XGBoost in this case) achieved the following results on the test set:
 
-*   **Accuracy:** \[Insert your test accuracy]
-*   **Precision:** \[Insert your test precision]
-*   **Recall:** \[Insert your test recall]
-*   **F1-score:** \[Insert your test F1-score]
-*   **AUC:** \[Insert your test AUC]
+*   **Test Accuracy:** 0.7862
+*   **Precision:**
+    *   Class 0 (No Churn): 0.82
+    *   Class 1 (Churn): 0.65
+*   **Recall:**
+    *   Class 0 (No Churn): 0.89
+    *   Class 1 (Churn): 0.51
+*   **F1-score:**
+    *   Class 0 (No Churn): 0.86
+    *   Class 1 (Churn): 0.57
+*   **AUC:** (Not directly available in the output, but assuming you calculated it during training or evaluation)  Add it here if you have it, otherwise remove this line.
+*   **Macro Avg Precision:** 0.74
+*   **Macro Avg Recall:** 0.70
+*   **Macro Avg F1-score:** 0.71
+*   **Weighted Avg Precision:** 0.78
+*   **Weighted Avg Recall:** 0.79
+*   **Weighted Avg F1-score:** 0.78
 
-**Confusion Matrix:**
+***Confusion Matrix:**
 
-\[Insert your confusion matrix visualization here]
+![Confusion Matrix](assets/churn_prediction_confusion_matrix.png)
+
+**Interpretation of Results:**
+
+*   **Accuracy:** The overall accuracy of the model is 78.62%, meaning that it correctly classifies approximately 79 out of 100 customers.
+*   **Precision:**
+    *   For class 0 (no churn), the precision is 0.82, indicating that when the model predicts a customer will not churn, it is correct 82% of the time.
+    *   For class 1 (churn), the precision is 0.65, meaning that when the model predicts a customer will churn, it is correct 65% of the time.
+*   **Recall:**
+    *   For class 0, the recall is 0.89, indicating that the model correctly identifies 89% of the customers who actually did not churn.
+    *   For class 1, the recall is 0.51, meaning that the model correctly identifies only 51% of the customers who actually churned.
+*   **F1-score:** The F1-score is a harmonic mean of precision and recall. It provides a balanced measure of the model's performance, especially when dealing with imbalanced datasets.
+    *   The F1-score for class 0 is 0.86.
+    *   The F1-score for class 1 is 0.57, indicating that the model's performance on the churn class is not as strong as on the no-churn class.
+*   **AUC:** (If you have the AUC value, add a brief interpretation here).
+*   **Confusion Matrix:** The confusion matrix provides a visual representation of the model's performance. We can see that:
+    *   The model correctly classified 680 non-churning customers (true negatives).
+    *   The model incorrectly classified 81 non-churning customers as churning (false positives).
+    *   The model correctly classified 151 churning customers (true positives).
+    *   The model incorrectly classified 145 churning customers as not churning (false negatives).
+
+**Analysis:**
+
+The model performs reasonably well in predicting customer churn, with an overall accuracy of 78.62%. However, there's a noticeable difference in performance between the two classes. The model is better at identifying customers who will not churn (higher recall for class 0) but struggles more with identifying customers who will churn (lower recall for class 1). This is also reflected in the lower F1-score for class 1.
+
+**Possible Improvements:**
+
+*   **Address Class Imbalance:** If the dataset is imbalanced (i.e., many more non-churn examples than churn examples), techniques like oversampling the minority class, undersampling the majority class, or using cost-sensitive learning could be explored.
+*   **Feature Engineering:** Further feature engineering might help to create more informative features that improve the model's ability to distinguish between the classes.
+*   **Hyperparameter Tuning:** More extensive hyperparameter tuning, potentially using techniques like `GridSearchCV` or `RandomizedSearchCV`, could lead to better model performance.
+*   **Try Different Models:** Experimenting with other algorithms (e.g., LightGBM, CatBoost) might yield better results.
 
 **Training and Validation Curves:**
 
-\[Insert your training/validation loss and accuracy plots here]
+(If you have the training and validation loss/accuracy curves, include the images here and add a brief interpretation. For example, you might discuss whether there are signs of overfitting or underfitting.)
 
 ## Project Structure
 
