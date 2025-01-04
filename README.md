@@ -32,13 +32,13 @@ This repository does not include the full dataset due to its size. To download t
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/antonsoo/customer-churn-prediction.git
+    git clone https://github.com/antonsoo/customer-churn-prediction-streamlit
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd customer-churn-prediction
+    cd customer-churn-prediction-streamlit
     ```
 
 3. Install the required packages:
@@ -128,7 +128,7 @@ The model performs reasonably well in predicting customer churn, with an overall
 ## Project Structure
 
 ```
-customer-churn-prediction/
+customer-churn-prediction-streamlit/
 ├── data/
 │ └── HOW_TO_DOWNLOAD_DATA.md (Instructions for downloading the dataset)
 ├── model/
@@ -153,7 +153,7 @@ Contributions to this project are welcome! Feel free to submit pull requests or 
 
 ## License
 
-This project is licensed under the \[Your Chosen License] - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
